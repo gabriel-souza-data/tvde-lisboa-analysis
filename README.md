@@ -54,13 +54,13 @@ hidden by the platforms for privacy reasons.
 
 **Uber ride examples:**
 
-![Uber ride example 1](images/data_collection_uber_example_1.jpeg)
-![Uber ride example 2](images/data_collection_uber_example_2.jpeg)
+<img src="images/data_collection_uber_example_1.jpeg" width="150"/>
+<img src="images/data_collection_uber_example_2.jpeg" width="150"/>
 
 **Bolt ride examples:**
 
-![Bolt ride example 1](images/data_collection_bolt_example_1.jpeg)
-![Bolt ride example 2](images/data_collection_bolt_example_2.jpeg)
+<img src="images/data_collection_bolt_example_1.jpeg" width="150"/>
+<img src="images/data_collection_bolt_example_2.jpeg" width="150"/>
 
 > *Screenshots from the Uber and Bolt driver apps are used for
 > educational and portfolio purposes only, to illustrate the
