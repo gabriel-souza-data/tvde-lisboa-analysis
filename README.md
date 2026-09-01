@@ -8,7 +8,7 @@ driver in Lisbon, Portugal.
 
 ## Project Overview
 
-This project analyses 1,500+ rides across two platforms (Uber and Bolt)
+This project analyses 2,541 rides across two platforms (Uber and Bolt)
 to answer practical questions about driver earnings, ride efficiency,
 and operational strategy. Unlike most portfolio projects that use
 generic datasets, every data point here was recorded from real working
@@ -52,15 +52,21 @@ appears in the Uber and Bolt driver apps before being recorded
 into the spreadsheet. All personal passenger information is
 hidden by the platforms for privacy reasons.
 
-**Uber ride examples:**
+<table>
+<tr><td colspan="2"><b>Uber ride examples</b></td></tr>
+<tr>
+<td><img src="images/data_collection_uber_example_1.jpeg" width="280"/></td>
+<td><img src="images/data_collection_uber_example_2.jpeg" width="280"/></td>
+</tr>
+</table>
 
-<img src="images/data_collection_uber_example_1.jpeg" width="250"/>
-<img src="images/data_collection_uber_example_2.jpeg" width="250"/>
-
-**Bolt ride examples:**
-
-<img src="images/data_collection_bolt_example_1.jpeg" width="250"/>
-<img src="images/data_collection_bolt_example_2.jpeg" width="250"/>
+<table>
+<tr><td colspan="2"><b>Bolt ride examples</b></td></tr>
+<tr>
+<td><img src="images/data_collection_bolt_example_1.jpeg" width="280"/></td>
+<td><img src="images/data_collection_bolt_example_2.jpeg" width="280"/></td>
+</tr>
+</table>
 
 > *Screenshots from the Uber and Bolt driver apps are used for
 > educational and portfolio purposes only, to illustrate the
@@ -75,12 +81,11 @@ hidden by the platforms for privacy reasons.
 - **Platform receipts as source of truth** — the driver earnings shown in the app represent the final confirmed amount after any platform adjustments
 
 **Collection period:** March 4 – August 2026
-**Total rides analysed:** *(update in August)*
-**Working days:** *(update in August)*
+**Total rides analysed:** 2,541
+**Working days:** 152
 **Platforms:** Uber and Bolt
 
-> This project was developed between March and June 2026 and updated
-> with the complete dataset in August 2026 before being made public.
+> This project was developed between March and August 2026.
 > The analysis covers the full March–August 2026 period to capture
 > both spring and summer mobility patterns in Lisbon.
 
@@ -121,15 +126,17 @@ hidden by the platforms for privacy reasons.
 
 ### Acceptance criteria
 
-Rides are accepted only if they meet **both** conditions:
+Rides are accepted under the following conditions:
 - Minimum **0.50 €/km**
-- Minimum **12 €/hour** *(e.g. a 6€ ride must take no more than 30 min to qualify)*
+- Minimum **12 €/hour**
+*Example: A €6 ride must be 12 km long and last a maximum of 30 minutes.*
 
 ### Working schedule
 
 - Start: 12:30–13:00
 - End: 21:30–22:00
 - Rest days: variable (no fixed day off)
+- having a few days with runs outside of that schedule for personal reasons
 
 ### Earnings targets
 
@@ -140,8 +147,7 @@ Rides are accepted only if they meet **both** conditions:
 
 The reference minimum wage used is **920€ gross (2026)**. The gross
 value was chosen over net because tax deductions vary by personal
-situation (marital status, dependants). Using gross standardises
-the comparison across different driver profiles.
+situation (marital status, dependants).
 
 ---
 
@@ -212,7 +218,7 @@ ROUND( (Last_Date - First_Date) / 7 )
 ```
 
 This formula is identical in Python, SQL and Power BI —
-verified by cross-validation (see Methodology Notes).
+verified by cross-validation.
 
 ---
 
@@ -225,28 +231,28 @@ verified by cross-validation (see Methodology Notes).
 - What is the net profit after all operational costs?
 
 ### Operational efficiency
-- Does working more hours per day increase €/hour? (Q6)
-- Do longer rides pay more per km? (Q7)
-- Is there a statistically significant difference between Uber and Bolt? (Q8)
-- Does more rides per day lead to higher €/hour? (Q9)
+- Does working more hours per day increase €/hour? (Q1)
+- Do longer rides pay more per km? (Q2)
+- Is there a statistically significant difference between Uber and Bolt? (Q3)
+- Does more rides per day lead to higher €/hour? (Q4)
 
 ### Temporal patterns
-- What is the best day of the week to work? (Q10)
-- Which hours generate the most profit? (Q11)
-- Is there an upward trend in earnings over time? (Q12)
-- Do weekends perform differently from weekdays? (Q13)
+- Is there a consistent weekly pattern? (Q5)
+- Which hour of the day generates the most profit? (Q6)
+- Is there a trend over time in €/hour earnings? (Q7)
+- Do weekends behave differently from weekdays? (Q8)
 
 ### Ride profile
-- What does the typical ride look like? (Q14–Q16)
-- Which distance bracket is most profitable? (Q15)
-- Which category generates the best €/hour? (Q16)
+- What is the real distribution of distances and fares? (Q9)
+- Is there an optimal ride distance? (Q10)
+- What is the profile of the most frequent ride? (Q11)
 
 ### Acceptance criteria analysis
-- What percentage of rides meet the driver's quality criteria? (Q17)
-- When do the best rides appear during the day? (Q18)
-- How close are daily and weekly results to earnings targets? (Q19)
-- Is the current working schedule well optimised? (Q21)
-- Does more km per day mean more net profit? (Q22)
+- What % of rides meet the acceptance criteria? (Q12)
+- At what time do more rides meet the acceptance criteria? (Q13)
+- How close are results to the daily and weekly targets? (Q14)
+- Is the working schedule (12:30–22:00) well dimensioned? (Q15)
+- Does more km per day lead to higher net profit? (Q16)
 
 ### Geographic mobility
 - Which postal code areas generate the most rides?
@@ -288,9 +294,9 @@ Net profit after all costs was validated across all three tools:
 
 | Tool | Net Profit |
 |---|---|
-| Power BI | *(update in August)* |
-| Python | *(update in August)* |
-| SQL | *(update in August)* |
+| Power BI | 12,869.07 € |
+| Python | 12,869.07 € |
+| SQL | 12,869.07 € |
 
 All three return identical results, confirming consistency across
 the full analysis pipeline.
@@ -299,18 +305,52 @@ the full analysis pipeline.
 
 ## Key Findings
 
-*(Based on March–June 2026 data — will be updated with full dataset)*
+*(Full March–August 2026 dataset — 2,541 rides across 152 working days)*
 
-- **Net profit per hour:** 18.42 €
-- **Days to reach minimum wage:** 11 days (out of ~22 working days)
-- **82.1% of rides meet both acceptance criteria** — strategy is working
-- **Friday is the best day** (118€ avg daily earnings, 26.8 €/h)
-- **16:00–18:00 is the golden window** — 91–93% acceptance rate
-- **Bolt slightly outperforms Uber** in acceptance rate (84.7% vs 79.6%) but the difference is not statistically significant (p = 0.088)
-- **More rides per day = higher €/hour** (r = 0.36, p = 0.0004)
-- **Short rides (0–3 km) are most efficient** (2.13 €/km, 41.9 €/h) but represent only 8.3% of rides
-- **The 5–12 km bracket is the core market** (53% of all rides)
-- **Postal codes 1300 and 1500** are the top origin and destination zones, accounting for ~20% of all ride starts
+- **Net profit per hour:** 18.93 €
+- **Days to reach minimum wage:** 11 days (920€ gross)
+- **84.3% of rides meet both acceptance criteria** — strategy is working
+- **Friday is the best day** (116€ avg daily earnings, 27.2 €/h)
+- **16:00–18:00 is the golden window** — 91–94% acceptance rate
+- **Bolt outperforms Uber** in acceptance rate (88.2% vs 80.6%) — statistically significant (p = 0.0019)
+- **More rides per day = higher €/hour** (r = 0.422, p < 0.001)
+- **Short rides (0–3 km) are most efficient** (2.22 €/km, 42.9 €/h) but represent only 8.5% of rides
+- **The 5–12 km bracket is the core market** (53.6% of all rides)
+- **Postal codes 1300 and 1500** are the top origin and destination zones, accounting for ~21% of all ride starts
+
+---
+
+## Power BI Dashboard Preview
+
+Static previews of the 4-page interactive dashboard, generated from the
+full March–August 2026 dataset.
+
+> **Note:** These are static screenshots. To interact with the dashboard
+> (filter by platform, drill into categories, explore the map), open
+> `powerbi/tvde_dashboard.pbix` in Power BI Desktop.
+
+<table>
+<tr>
+<td width="50%">
+<img src="images/dashboard_overview.png" width="100%"/>
+<br/><sub><b>Overview</b> — KPIs, earnings and minimum wage tracker</sub>
+</td>
+<td width="50%">
+<img src="images/dashboard_driver_performance.png" width="100%"/>
+<br/><sub><b>Driver Performance</b> — daily earnings trend over time</sub>
+</td>
+</tr>
+<tr>
+<td width="50%">
+<img src="images/dashboard_platforms.png" width="100%"/>
+<br/><sub><b>Platforms</b> — Uber vs Bolt volume and category breakdown</sub>
+</td>
+<td width="50%">
+<img src="images/dashboard_map.png" width="100%"/>
+<br/><sub><b>Map</b> — geographic distribution of ride origins across Lisbon</sub>
+</td>
+</tr>
+</table>
 
 ---
 
@@ -334,6 +374,10 @@ tvde-lisboa-analysis/
 │   ├── data_collection_uber_example_2.jpeg
 │   ├── data_collection_bolt_example_1.jpeg
 │   ├── data_collection_bolt_example_2.jpeg
+│   ├── dashboard_overview.png
+│   ├── dashboard_driver_performance.png
+│   ├── dashboard_platforms.png
+│   ├── dashboard_map.png
 │   └── *.png ← charts generated by the notebooks
 ├── README.md
 └── requirements.txt
@@ -344,7 +388,7 @@ tvde-lisboa-analysis/
 ## How to Run
 
 ```
-git clone https://github.com/YOUR_USERNAME/tvde-lisboa-analysis.git
+git clone https://github.com/gabriel-souza-data/tvde-lisboa-analysis
 cd tvde-lisboa-analysis
 pip install -r requirements.txt
 jupyter lab
@@ -368,11 +412,12 @@ Run notebooks in order:
 | SQLite (via Python) | SQL query analysis |
 | folium | Geographic visualisation library |
 | Power BI | Interactive dashboard |
+| Claude (Anthropic) | AI-assisted development — code review, debugging and documentation |
 | GitHub | Version control and portfolio hosting |
 
 ---
 
 ## Author
 
-**Gabriel** — TVDE driver and data analyst in training
-Lisbon, Portugal · 2026
+**Gabriel** — TVDE driver and data analyst Lisbon, Portugal · 2026
+LinkedIn: https://www.linkedin.com/in/gabriel-souza-5bb6123a8/ GitHub: https://github.com/gabriel-souza-data
