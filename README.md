@@ -419,5 +419,5 @@ Run notebooks in order:
 
 ## Author
 
-**Gabriel** — TVDE driver and data analyst Lisbon, Portugal · 2026
+**Gabriel Souza** — TVDE driver and data analyst Lisbon, Portugal · 2026
 LinkedIn: https://www.linkedin.com/in/gabriel-souza-5bb6123a8/ GitHub: https://github.com/gabriel-souza-data
