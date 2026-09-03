@@ -1,4 +1,4 @@
-# TVDE Lisbon — Driver Analytics
+# Uber & Bolt Driver Analytics
 
 A data analytics portfolio project built on **real ride-hailing data**
 collected manually over 6 months (March–August 2026) as a working TVDE
