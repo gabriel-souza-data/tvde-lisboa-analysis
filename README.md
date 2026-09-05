@@ -1,4 +1,4 @@
-# TVDE Lisbon — Driver Analytics
+# Uber & Bolt Driver Analytics
 
 A data analytics portfolio project built on **real ride-hailing data**
 collected manually over 6 months (March–August 2026) as a working TVDE
@@ -357,7 +357,7 @@ full March–August 2026 dataset.
 ## Project Structure
 
 ```
-tvde-lisboa-analysis/
+uber-bolt-driver-analytics/
 ├── data/
 │   ├── raw/
 │   │   └── TVDE_In.xlsx
@@ -388,8 +388,8 @@ tvde-lisboa-analysis/
 ## How to Run
 
 ```
-git clone https://github.com/gabriel-souza-data/tvde-lisboa-analysis
-cd tvde-lisboa-analysis
+git clone https://github.com/gabriel-souza-data/uber-bolt-driver-analytics
+cd uber-bolt-driver-analytics
 pip install -r requirements.txt
 jupyter lab
 ```
