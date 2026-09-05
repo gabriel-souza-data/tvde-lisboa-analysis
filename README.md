@@ -327,7 +327,7 @@ full March–August 2026 dataset.
 
 > **Note:** These are static screenshots. To interact with the dashboard
 > (filter by platform, drill into categories, explore the map), open
-> `powerbi/tvde_dashboard.pbix` in Power BI Desktop.
+> `powerbi/uber-bolt-driver-analytics.pbix` in Power BI Desktop.
 
 <table>
 <tr>
@@ -368,7 +368,7 @@ tvde-lisboa-analysis/
 │   ├── 02_sql_analysis.ipynb
 │   └── 03_mobility_analysis.ipynb
 ├── powerbi/
-│   └── tvde_dashboard.pbix
+│   └── uber-bolt-driver-analytics.pbix
 ├── images/
 │   ├── data_collection_uber_example_1.jpeg
 │   ├── data_collection_uber_example_2.jpeg
